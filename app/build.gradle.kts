@@ -62,7 +62,6 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
 
-
     implementation("com.jakewharton.timber:timber:5.0.1")
 
     // Testing

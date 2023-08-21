@@ -9,5 +9,5 @@ data class ApiQuote(
     val author: String,
     val authorSlug: String,
     val length: Int,
-    val tags: Array<String>
+    val tags: Array<String>,
 )

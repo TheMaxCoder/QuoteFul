@@ -21,5 +21,4 @@ class Repository(val api: ApiService, val db: QuoteDao) {
             db.insert(quotes)
         }
     }
-
 }

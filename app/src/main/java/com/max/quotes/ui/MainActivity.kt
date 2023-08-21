@@ -24,6 +24,4 @@ class MainActivity : AppCompatActivity() {
             quotesAdapter.submit(it)
         }
     }
-
-
 }

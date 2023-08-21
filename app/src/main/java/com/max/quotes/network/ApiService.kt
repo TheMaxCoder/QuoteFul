@@ -6,5 +6,4 @@ interface ApiService {
 
     @GET("/quotes/random/?limit=10")
     suspend fun getQuotesList(): List<ApiQuote>
-
 }

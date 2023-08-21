@@ -47,6 +47,5 @@ class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAda
         override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
             return oldList[oldItemPosition] == newList[newItemPosition]
         }
-
     }
 }
