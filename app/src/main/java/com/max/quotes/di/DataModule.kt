@@ -7,7 +7,6 @@ import com.max.quotes.data.db.QuoteDao
 import com.max.quotes.data.db.QuotesDb
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
-import timber.log.Timber
 
 val dataModule = module {
     singleOf(::provideDb)

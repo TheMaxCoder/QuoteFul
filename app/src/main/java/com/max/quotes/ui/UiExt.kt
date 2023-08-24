@@ -6,7 +6,6 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 
-
 val Int.dp: Int get() = (this / getSystem().displayMetrics.density).toInt()
 
 fun AppCompatActivity.setFullScreen() {

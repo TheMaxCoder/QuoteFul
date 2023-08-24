@@ -21,7 +21,7 @@ class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAda
                 button.isSelected = button.isSelected.not()
                 // TODO: Add to favorites..
             }
-            binding.imageViewShare.setOnClickListener {
+            binding.buttonShareQuote.setOnClickListener {
                 val sendIntent: Intent = Intent().apply {
                     action = Intent.ACTION_SEND
                     putExtra(Intent.EXTRA_TEXT, "${quote.content} \n ${quote.author}")
@@ -31,8 +31,6 @@ class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAda
                 binding.root.context.startActivity(shareIntent)
             }
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

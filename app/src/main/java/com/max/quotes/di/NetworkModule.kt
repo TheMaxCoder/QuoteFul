@@ -7,7 +7,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 const val QUOTES_URL = "https://api.quotable.io"
 
-
 val networkModule = module {
     single { provideQuoteApi(provideRetrofit()) }
 }
