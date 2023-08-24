@@ -63,6 +63,8 @@ dependencies {
     ksp("androidx.room:room-compiler:$room_version")
 
     implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.squareup.logcat:logcat:0.1")
+    implementation("io.coil-kt:coil:2.4.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

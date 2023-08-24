@@ -1,5 +1,6 @@
 package com.max.quotes.data.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -9,7 +10,7 @@ import androidx.room.Query
 interface QuoteDao {
 
     @Query("SELECT * FROM quote")
-    fun getAllQuotes(): List<Quote>
+    fun getAllQuotes(): LiveData<List<Quote>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(quotes: List<Quote>)

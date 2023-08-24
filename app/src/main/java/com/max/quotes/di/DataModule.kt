@@ -15,7 +15,6 @@ val dataModule = module {
 }
 
 private fun provideDb(context: Context): QuoteDao {
-    Timber.i("Database init...")
     val db = Room.databaseBuilder(context, QuotesDb::class.java, "quotes").build()
     return db.quoteDao()
 }

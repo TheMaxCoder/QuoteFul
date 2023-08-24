@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.max.quotes.R
 import com.max.quotes.data.db.Quote
 import com.max.quotes.databinding.ItemMainListBinding
+import logcat.logcat
+import timber.log.Timber
 
 class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
+
     class ViewHolder(private val binding: ItemMainListBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(quote: Quote, position: Int) {
-            binding.quote.text = binding.root.context.getString(R.string.text_quote, position + 1, quote.content)
+        fun bind(quote: Quote) {
+            binding.quote.text = binding.root.context.getString(R.string.text_quote, quote.content)
             binding.author.text = binding.root.context.getString(R.string.text_author_name, quote.author)
         }
     }
@@ -25,7 +28,7 @@ class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAda
     override fun getItemCount() = quotes.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(quotes[position], position)
+        holder.bind(quotes[position])
     }
 
     fun submit(newList: List<Quote>) {
