@@ -7,14 +7,11 @@ import com.max.quotes.di.uiModule
 import logcat.AndroidLogcatLogger
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import timber.log.Timber
 
 class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        Timber.plant(Timber.DebugTree())
         AndroidLogcatLogger.installOnDebuggableApp(this)
 
         startKoin {

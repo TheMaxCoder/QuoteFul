@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class MainViewModel(private val repository: Repository) : ViewModel() {
 
     init {
-        viewModelScope.launch { repository.fetchNewQuotesAndSave() }
+//        viewModelScope.launch { repository.fetchNewQuotesAndSave() }
     }
 
     fun getQuotes(): LiveData<List<Quote>> {

@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface QuoteDao {
 
-    @Query("SELECT * FROM quote")
+    @Query("SELECT * FROM quote ORDER BY id DESC")
     fun getAllQuotes(): LiveData<List<Quote>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

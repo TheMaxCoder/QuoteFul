@@ -45,26 +45,29 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     // Networking
-    val retrofit_version = "2.9.0"
-    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
-    implementation("com.squareup.retrofit2:converter-moshi:$retrofit_version")
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-moshi:$retrofitVersion")
 
-    val moshi_version = "1.14.0"
-    implementation("com.squareup.moshi:moshi:$moshi_version")
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:$moshi_version")
+    val moshiVersion = "1.14.0"
+    implementation("com.squareup.moshi:moshi:$moshiVersion")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
 
     // DI
-    val koin_version = "3.4.3"
-    implementation("io.insert-koin:koin-android:$koin_version")
+    val koinVersion = "3.4.3"
+    implementation("io.insert-koin:koin-android:$koinVersion")
 
     // Database
-    val room_version = "2.5.2"
-    implementation("androidx.room:room-runtime:$room_version")
-    ksp("androidx.room:room-compiler:$room_version")
+    val roomVersion = "2.5.2"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
-    implementation("com.jakewharton.timber:timber:5.0.1")
+    // Animations
+    val lottieVersion = "3.4.0"
+    implementation("com.airbnb.android:lottie:$lottieVersion")
+
+    // Extras
     implementation("com.squareup.logcat:logcat:0.1")
-    implementation("io.coil-kt:coil:2.4.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
