@@ -1,14 +1,12 @@
 package com.max.quotes.data
 
+import com.max.quotes.data.db.Quote
 import com.max.quotes.data.db.QuoteDao
 import com.max.quotes.data.mapping.toQuote
 import com.max.quotes.network.ApiQuote
 import com.max.quotes.network.ApiService
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.max.quotes.data.db.Quote
 import io.mockk.coEvery
 import io.mockk.coVerify
-import io.mockk.every
 import io.mockk.just
 import io.mockk.mockk
 import io.mockk.runs
@@ -17,8 +15,6 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
-
 
 @ExperimentalCoroutinesApi
 class QuoteRepositoryTest {
@@ -30,7 +26,6 @@ class QuoteRepositoryTest {
     @Before
     fun setupMocks() {
         repository = QuoteRepository(api, dao)
-
     }
 
     @Test

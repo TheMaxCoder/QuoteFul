@@ -52,5 +52,4 @@ class MainAdapter(val quotes: MutableList<Quote>) : RecyclerView.Adapter<MainAda
         fun onFavoriteClicked(quote: Quote)
         fun onShareClicked(quote: Quote)
     }
-
 }

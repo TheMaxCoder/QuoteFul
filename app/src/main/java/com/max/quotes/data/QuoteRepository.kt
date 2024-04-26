@@ -8,12 +8,10 @@ import com.max.quotes.network.ApiService
 
 class QuoteRepository(private val api: ApiService, private val db: QuoteDao) {
 
-
     suspend fun updateQuotesFromApi() {
         val newQuotes = fetchNewQuotesFromApi()
         val quotes = newQuotes.map { it.toQuote() }
         insertQuotes(quotes)
-
     }
 
     private suspend fun fetchNewQuotesFromApi(): List<ApiQuote> {

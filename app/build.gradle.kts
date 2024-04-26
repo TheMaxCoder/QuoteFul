@@ -86,12 +86,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
     val mockkVersion = "1.13.8"
-    testImplementation("io.mockk:mockk:${mockkVersion}")
-    testImplementation("io.mockk:mockk-android:${mockkVersion}")
-    testImplementation("io.mockk:mockk-agent:${mockkVersion}")
+    testImplementation("io.mockk:mockk:$mockkVersion")
+    testImplementation("io.mockk:mockk-android:$mockkVersion")
+    testImplementation("io.mockk:mockk-agent:$mockkVersion")
 
-    androidTestImplementation("io.mockk:mockk-android:${mockkVersion}")
-    androidTestImplementation("io.mockk:mockk-agent:${mockkVersion}")
+    androidTestImplementation("io.mockk:mockk-android:$mockkVersion")
+    androidTestImplementation("io.mockk:mockk-agent:$mockkVersion")
 
     androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation("androidx.test.ext:junit:1.1.5")
