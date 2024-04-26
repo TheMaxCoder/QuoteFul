@@ -1,4 +1,4 @@
-package com.max.quotes.ui
+package com.max.quotes.util
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper

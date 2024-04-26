@@ -2,7 +2,19 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="MainViewModelTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="test UI State when quotes are fetched successfully()">
+        <State />
+      </entry>
+      <entry key="testQuotesFetchedSuccessfully()">
+        <State />
+      </entry>
+      <entry key="testSuccessScenario()">
         <State />
       </entry>
     </value>

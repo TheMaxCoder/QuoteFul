@@ -5,16 +5,20 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface QuoteDao {
 
     @Query("SELECT * FROM quote ORDER BY id DESC")
-    fun getAllQuotes(): LiveData<List<Quote>>
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(quotes: List<Quote>)
+    suspend fun getAllQuotes(): List<Quote>
 
     @Query("DELETE FROM quote ")
-    fun nukeTable()
+    suspend fun nukeTable()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(quotes: List<Quote>)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(quote: Quote)
 }

@@ -1,33 +1,34 @@
 package com.max.quotes.data
 
-import androidx.lifecycle.LiveData
 import com.max.quotes.data.db.Quote
 import com.max.quotes.data.db.QuoteDao
+import com.max.quotes.data.mapping.toQuote
 import com.max.quotes.network.ApiQuote
 import com.max.quotes.network.ApiService
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import logcat.logcat
 
 class QuoteRepository(private val api: ApiService, private val db: QuoteDao) {
 
-    fun getQuotes(): LiveData<List<Quote>> {
+
+    suspend fun updateQuotesFromApi() {
+        val newQuotes = fetchNewQuotesFromApi()
+        val quotes = newQuotes.map { it.toQuote() }
+        insertQuotes(quotes)
+
+    }
+
+    private suspend fun fetchNewQuotesFromApi(): List<ApiQuote> {
+        return api.getQuotesList()
+    }
+
+    private suspend fun insertQuotes(quotes: List<Quote>) {
+        db.insert(quotes)
+    }
+
+    suspend fun getAllQuotesFromDb(): List<Quote> {
         return db.getAllQuotes()
     }
 
-    suspend fun fetchNewQuotesAndSave() {
-        try {
-            val newQuotes = fetchFromApi()
-            val quotes = newQuotes.map { it.toQuote() }
-            db.insert(quotes)
-        } catch (e: Exception) {
-            logcat { e.toString() }
-        }
-    }
-
-    private suspend fun fetchFromApi(): List<ApiQuote> {
-        return withContext(Dispatchers.IO) {
-            api.getQuotesList()
-        }
+    suspend fun updateQuote(quote: Quote) {
+        db.update(quote)
     }
 }

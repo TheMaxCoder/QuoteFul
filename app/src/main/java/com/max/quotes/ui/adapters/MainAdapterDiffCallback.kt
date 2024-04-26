@@ -1,4 +1,4 @@
-package com.max.quotes.ui
+package com.max.quotes.ui.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.max.quotes.data.db.Quote
