@@ -16,6 +16,7 @@ It leverages the [Quotable API](https://docs.quotable.io) to provide users with 
 - [Koin](https://insert-koin.io/): Koin is a lightweight dependency injection framework for Kotlin.
 - [Ktlint](https://ktlint.github.io/): Ktlint is a Kotlin linter for code formatting to ensure consistent code style.
 - [MockK](https://mockk.io/): MockK is a mocking library for Kotlin, used for testing purposes.
+- [GitHub Actions](https://github.com/features/actions): GitHub Actions is used as a CI/CD tool for automating workflows, including building, testing, and deploying applications directly from GitHub repositories.
 
 ## Architecture 🏛️
 
@@ -24,7 +25,7 @@ QuoteFul follows the MVVM (Model-View-ViewModel) architecture pattern, which sep
 ## Contact 📩
 
 Feel free to reach out via [email](mailto:atiq.codes@gmail.com) 📧 or connect with me on [LinkedIn](https://www.linkedin.com/in/themaxcoder) 💼. 
-Alternatively, you can visit my [website](https://themaxcoder.github.io) for more information.
+Alternatively, you can visit my [website](https://atiq.work) for more information.
 I'd love to hear your feedback or answer any questions you may have!
 
 ## License 📜
